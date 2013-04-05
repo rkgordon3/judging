@@ -1,0 +1,16 @@
+<div data-role="page" 
+             id=<%= "events_index" %> >
+	<div data-role="header">Events</div>
+
+	<div data-role="content" >
+	  <ul data-role='listview' data-inset="true" data-filter="true">
+	  <% @events.each do |event| %>
+	    <li><a href=<%= event_competitors_path(event) %> data-transition="fade"><%= event.name %></a></li>
+	  <% end %>
+	  </ul>
+	</div>
+</div>
+
+
+
+

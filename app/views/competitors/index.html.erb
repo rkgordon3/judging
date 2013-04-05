@@ -1,0 +1,15 @@
+<div data-role="page" 
+             id="competitors_index_#{@event.id}" %> >
+
+    <div data-role="header">Competitors for <%= @event.name %></div>
+
+	<div data-role="content" >
+	  <ul data-role='listview' data-inset="true" data-filter="true">
+	  <% @competitors.each do |competitor| %>
+	    <li><a href=<%= judge_event_competitor_path(@event, competitor) %> ><%= competitor.name %></a>
+	    </li>
+	  <% end %>
+	  </ul>
+	</div>
+</div>
+

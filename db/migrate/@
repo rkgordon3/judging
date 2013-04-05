@@ -1,0 +1,78 @@
+                               questions GET    /questions(.:format)                                                                           questions#index
+                                         POST   /questions(.:format)                                                                           questions#create
+                            new_question GET    /questions/new(.:format)                                                                       questions#new
+                           edit_question GET    /questions/:id/edit(.:format)                                                                  questions#edit
+                                question GET    /questions/:id(.:format)                                                                       questions#show
+                                         PUT    /questions/:id(.:format)                                                                       questions#update
+                                         DELETE /questions/:id(.:format)                                                                       questions#destroy
+                                 results GET    /results(.:format)                                                                             results#index
+                                         POST   /results(.:format)                                                                             results#create
+                              new_result GET    /results/new(.:format)                                                                         results#new
+                             edit_result GET    /results/:id/edit(.:format)                                                                    results#edit
+                                  result GET    /results/:id(.:format)                                                                         results#show
+                                         PUT    /results/:id(.:format)                                                                         results#update
+                                         DELETE /results/:id(.:format)                                                                         results#destroy
+                             competitors GET    /competitors(.:format)                                                                         competitors#index
+                                         POST   /competitors(.:format)                                                                         competitors#create
+                          new_competitor GET    /competitors/new(.:format)                                                                     competitors#new
+                         edit_competitor GET    /competitors/:id/edit(.:format)                                                                competitors#edit
+                              competitor GET    /competitors/:id(.:format)                                                                     competitors#show
+                                         PUT    /competitors/:id(.:format)                                                                     competitors#update
+                                         DELETE /competitors/:id(.:format)                                                                     competitors#destroy
+                            score_sheets GET    /score_sheets(.:format)                                                                        score_sheets#index
+                                         POST   /score_sheets(.:format)                                                                        score_sheets#create
+                         new_score_sheet GET    /score_sheets/new(.:format)                                                                    score_sheets#new
+                        edit_score_sheet GET    /score_sheets/:id/edit(.:format)                                                               score_sheets#edit
+                             score_sheet GET    /score_sheets/:id(.:format)                                                                    score_sheets#show
+                                         PUT    /score_sheets/:id(.:format)                                                                    score_sheets#update
+                                         DELETE /score_sheets/:id(.:format)                                                                    score_sheets#destroy
+                       judge_scoresheets GET    /judges/:judge_id/scoresheets(.:format)                                                        scoresheets#index
+                                         POST   /judges/:judge_id/scoresheets(.:format)                                                        scoresheets#create
+                    new_judge_scoresheet GET    /judges/:judge_id/scoresheets/new(.:format)                                                    scoresheets#new
+                   edit_judge_scoresheet GET    /judges/:judge_id/scoresheets/:id/edit(.:format)                                               scoresheets#edit
+                        judge_scoresheet GET    /judges/:judge_id/scoresheets/:id(.:format)                                                    scoresheets#show
+                                         PUT    /judges/:judge_id/scoresheets/:id(.:format)                                                    scoresheets#update
+                                         DELETE /judges/:judge_id/scoresheets/:id(.:format)                                                    scoresheets#destroy
+                                  judges GET    /judges(.:format)                                                                              judges#index
+                                         POST   /judges(.:format)                                                                              judges#create
+                               new_judge GET    /judges/new(.:format)                                                                          judges#new
+                              edit_judge GET    /judges/:id/edit(.:format)                                                                     judges#edit
+                                   judge GET    /judges/:id(.:format)                                                                          judges#show
+                                         PUT    /judges/:id(.:format)                                                                          judges#update
+                                         DELETE /judges/:id(.:format)                                                                          judges#destroy
+                            event_judges GET    /events/:event_id/judges(.:format)                                                             judges#index
+                                         POST   /events/:event_id/judges(.:format)                                                             judges#create
+                         new_event_judge GET    /events/:event_id/judges/new(.:format)                                                         judges#new
+                        edit_event_judge GET    /events/:event_id/judges/:id/edit(.:format)                                                    judges#edit
+                             event_judge GET    /events/:event_id/judges/:id(.:format)                                                         judges#show
+                                         PUT    /events/:event_id/judges/:id(.:format)                                                         judges#update
+                                         DELETE /events/:event_id/judges/:id(.:format)                                                         judges#destroy
+judge_event_competitor_judge_score_sheet GET    /events/:event_id/competitors/:competitor_id/judges/:judge_id/score_sheets/:id/judge(.:format) score_sheets#judge
+     event_competitor_judge_score_sheets GET    /events/:event_id/competitors/:competitor_id/judges/:judge_id/score_sheets(.:format)           score_sheets#index
+                                         POST   /events/:event_id/competitors/:competitor_id/judges/:judge_id/score_sheets(.:format)           score_sheets#create
+  new_event_competitor_judge_score_sheet GET    /events/:event_id/competitors/:competitor_id/judges/:judge_id/score_sheets/new(.:format)       score_sheets#new
+ edit_event_competitor_judge_score_sheet GET    /events/:event_id/competitors/:competitor_id/judges/:judge_id/score_sheets/:id/edit(.:format)  score_sheets#edit
+      event_competitor_judge_score_sheet GET    /events/:event_id/competitors/:competitor_id/judges/:judge_id/score_sheets/:id(.:format)       score_sheets#show
+                                         PUT    /events/:event_id/competitors/:competitor_id/judges/:judge_id/score_sheets/:id(.:format)       score_sheets#update
+                                         DELETE /events/:event_id/competitors/:competitor_id/judges/:judge_id/score_sheets/:id(.:format)       score_sheets#destroy
+                 event_competitor_judges GET    /events/:event_id/competitors/:competitor_id/judges(.:format)                                  judges#index
+                                         POST   /events/:event_id/competitors/:competitor_id/judges(.:format)                                  judges#create
+              new_event_competitor_judge GET    /events/:event_id/competitors/:competitor_id/judges/new(.:format)                              judges#new
+             edit_event_competitor_judge GET    /events/:event_id/competitors/:competitor_id/judges/:id/edit(.:format)                         judges#edit
+                  event_competitor_judge GET    /events/:event_id/competitors/:competitor_id/judges/:id(.:format)                              judges#show
+                                         PUT    /events/:event_id/competitors/:competitor_id/judges/:id(.:format)                              judges#update
+                                         DELETE /events/:event_id/competitors/:competitor_id/judges/:id(.:format)                              judges#destroy
+                       event_competitors GET    /events/:event_id/competitors(.:format)                                                        competitors#index
+                                         POST   /events/:event_id/competitors(.:format)                                                        competitors#create
+                    new_event_competitor GET    /events/:event_id/competitors/new(.:format)                                                    competitors#new
+                   edit_event_competitor GET    /events/:event_id/competitors/:id/edit(.:format)                                               competitors#edit
+                        event_competitor GET    /events/:event_id/competitors/:id(.:format)                                                    competitors#show
+                                         PUT    /events/:event_id/competitors/:id(.:format)                                                    competitors#update
+                                         DELETE /events/:event_id/competitors/:id(.:format)                                                    competitors#destroy
+                                  events GET    /events(.:format)                                                                              events#index
+                                         POST   /events(.:format)                                                                              events#create
+                               new_event GET    /events/new(.:format)                                                                          events#new
+                              edit_event GET    /events/:id/edit(.:format)                                                                     events#edit
+                                   event GET    /events/:id(.:format)                                                                          events#show
+                                         PUT    /events/:id(.:format)                                                                          events#update
+                                         DELETE /events/:id(.:format)                                                                          events#destroy

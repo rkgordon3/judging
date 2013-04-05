@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Event:</b>
+  <%= @score_sheet.event_id %>
+</p>
+
+<p>
+  <b>Judge:</b>
+  <%= @score_sheet.judge_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_score_sheet_path(@score_sheet) %> |
+<%= link_to 'Back', score_sheets_path %>
