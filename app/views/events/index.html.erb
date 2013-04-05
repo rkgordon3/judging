@@ -5,11 +5,22 @@
 	<div data-role="content" >
 	  <ul data-role='listview' data-inset="true" data-filter="true">
 	  <% @events.each do |event| %>
-	    <li><a href=<%= event_competitors_path(event) %> data-transition="fade"><%= event.name %></a></li>
+	    <li><a href=<%= "##{competitor_page_id(event)}" %> 
+	    	   data-transition="fade"><%= event.name %></a>
+	    </li>
 	  <% end %>
 	  </ul>
 	</div>
 </div>
+
+<% @events.each do |event| %>
+	<div data-role="page" 
+            id=<%= competitor_page_id(event) %> >
+	    <%= render "competitors/index",  
+	               :event => event,
+	               :judge => @judge %>
+	</div>
+<% end %>
 
 
 

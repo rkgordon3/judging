@@ -1,4 +1,6 @@
 Judging::Application.routes.draw do
+  resources :evaluations
+
   resources :questions
 
   resources :results

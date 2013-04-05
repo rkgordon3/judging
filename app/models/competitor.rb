@@ -11,6 +11,10 @@
 #
 
 class Competitor < ActiveRecord::Base
+
+  scope :for_event, lambda { |e| where("event_id = ?", e.id ) }
+  
   attr_accessible :event_id, :name, :score
   belongs_to :event
+
 end

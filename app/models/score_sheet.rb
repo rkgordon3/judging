@@ -22,4 +22,5 @@ class ScoreSheet < ActiveRecord::Base
   belongs_to :judge
   belongs_to :event
   belongs_to :competitor
+  has_many   :evaluations
 end

@@ -3,6 +3,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
+    @judge = Judge.find(1) # FIXME
 
     respond_to do |format|
       format.html # index.html.erb
